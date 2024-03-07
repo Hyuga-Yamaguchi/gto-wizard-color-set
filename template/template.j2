@@ -1,0 +1,13 @@
+# gto-wizard-color-set
+
+## Color
+
+{% for o in outputs %}
+### {{ o.color_set }}
+
+|Color|Hex|RGB|
+|:--|:--|:--|
+{% for d in o.data -%}
+|![](https://via.placeholder.com/16/{{ d.hex }}/FFFFFF/?text=%20)|`#{{ d.hex }}`|{{ d.rgb }}|
+{% endfor -%}
+{% endfor %}
